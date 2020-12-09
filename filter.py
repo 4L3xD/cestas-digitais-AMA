@@ -1,8 +1,7 @@
 # -*- coding: utf-8 -*-
 import pandas as pd
-import xlrd
 
-formulario = pd.read_excel('cestas_digitais.xlsx',sheet_name='Respostas ao formulario',
+df = pd.read_excel('cestas_digitais.xlsx',sheet_name='Respostas ao formulario',
     usecols=['Sexo', 'Data de nascimento', 'Idade',	'Filhos', 'Primeiro filho',
     'Estado civil', 'Raca/Etnia', 'Escolaridade', 'Endereco', 'Bairro', 
     'Propriedade', 'Valor aluguel', 'Energia eletrica', 'Agua encanada',
@@ -22,8 +21,6 @@ formulario = pd.read_excel('cestas_digitais.xlsx',sheet_name='Respostas ao formu
     'Idade crianca', 'Escola', 'Periodo integral', 'Projetos',
     'Acesso a internet', 'Meio de acesso internet', 'Dispositivos'])
 
-print(formulario)
-
-
-
+df.to_excel('respostas_cestas.xlsx', encoding='utf-8', index=False)
+print('Dataframe exportado para excel!')
 
