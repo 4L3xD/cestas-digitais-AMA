@@ -44,3 +44,7 @@ def count(column, attribute0, attribute1, message0, message1):
 count('Saude familia', 'Sim', 'Não',
 'Pessoas pessoas com historico de doencas na familia',
 'Pessoas pessoas sem historico de doencas na familia')
+
+count('Deficientes familia', 'Sim', 'Não',
+'Pessoas pessoas com deficiencientes na familia',
+'Pessoas pessoas sem deficiencientes na familia')
