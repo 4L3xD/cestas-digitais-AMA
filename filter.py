@@ -48,3 +48,7 @@ count('Saude familia', 'Sim', 'Não',
 count('Deficientes familia', 'Sim', 'Não',
 'Pessoas pessoas com deficiencientes na familia',
 'Pessoas pessoas sem deficiencientes na familia')
+
+count('Periodo integral', 'Sim', 'Não',
+'Criancas que estudam em periodo integral',
+'Criancas que nao estudam em periodo integral')
