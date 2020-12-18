@@ -21,6 +21,26 @@ df = pd.read_excel('cestas_digitais.xlsx',sheet_name='Respostas ao formulario',
     'Idade crianca', 'Escola', 'Periodo integral', 'Projetos',
     'Acesso a internet', 'Meio de acesso internet', 'Dispositivos'])
 
-df.to_excel('respostas_cestas.xlsx', encoding='utf-8', index=False)
-print('Dataframe exportado para excel!')
+#df.to_excel('respostas_cestas.xlsx', encoding='utf-8', index=False)
+#print('Dataframe exportado para excel!')
 
+def count(column, attribute0, attribute1, message0, message1):
+    attribute0_count = 0
+    attribute1_count = 0
+    for i in df[column]:
+        print(i)
+        if i == None:
+            return
+            print('Thats None?', i)
+        elif i == attribute0.decode('utf-8'):
+            attribute0_count += 1
+            print('Thats a ' + str(attribute0), i)
+        elif i == attribute1.decode('utf-8'):
+            attribute1_count += 1
+            print('Thats a ' + str(attribute1), i)
+    print(message0, attribute0_count)
+    print(message1, attribute1_count)
+
+count('Saude familia', 'Sim', 'Não',
+'Pessoas pessoas com historico de doencas na familia',
+'Pessoas pessoas sem historico de doencas na familia')
