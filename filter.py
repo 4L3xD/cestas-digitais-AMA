@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 import pandas as pd
+#from matplotlib import pyplot as plt
 
 df = pd.read_excel('cestas_digitais.xlsx',sheet_name='Respostas ao formulario',
     usecols=['Sexo', 'Data de nascimento', 'Idade',	'Filhos', 'Primeiro filho',
@@ -40,6 +41,10 @@ def count(column, attribute0, attribute1, message0, message1):
             print('Thats a ' + str(attribute1), i)
     print(message0, attribute0_count)
     print(message1, attribute1_count)
+#    groups = ['Sim', 'Não']
+#    valors = [attribute0_count, attribute1_count]
+#    plt.bar(grupos, valores)
+#    plt.show()
 
 count('Saude familia', 'Sim', 'Não',
 'Pessoas pessoas com historico de doencas na familia',
@@ -52,3 +57,15 @@ count('Deficientes familia', 'Sim', 'Não',
 count('Periodo integral', 'Sim', 'Não',
 'Criancas que estudam em periodo integral',
 'Criancas que nao estudam em periodo integral')
+
+childs_age = []
+for child in df['Idade crianca']:
+    for age in range(19):
+        if child == age:
+            age_count = 0
+            if age in childs_age:
+              print(childs_age)
+            else:
+              age_count = 0
+              childs_age.insert(age, age)
+print(childs_age[18])
